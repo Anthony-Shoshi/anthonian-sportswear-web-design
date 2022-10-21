@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+/* body {
+    margin: 10px;
+} */
+
+header > h1 {
+    margin: 10px;
+}
+header > h2 {
+    margin: 10px;
+}
+
 nav {
     background: #66b7c5;
     height: 80px;
@@ -13,7 +24,6 @@ nav {
 .logo {
     width: 150px;
     height: 60px;
-    float: left;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -100,4 +110,63 @@ nav ul li a:hover {
         margin-right: 0;
     }
 
+}
+
+.articles section {
+    min-height: 200px;
+}
+
+.articles p {
+    font-size: 16px;
+    padding: 5px 0 5px;
+    text-align: left;
+}
+
+.articles img {
+    float: right;
+    width: 260px;
+    height: 130px;
+    margin: 0 0 0 15px;
+    border-radius: 5px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: #383636;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+article footer {
+    margin-top: 5px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.articles {
+    margin: 10px;
+}
+
+aside {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    height: 230px;
+    width: 470px;
+    background-color: lightgray;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+aside li {
+    margin: 12px;
+}
+
+footer p {
+    margin: 10px;
 }
