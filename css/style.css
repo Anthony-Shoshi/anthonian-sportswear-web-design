@@ -8,10 +8,11 @@
     margin: 10px;
 } */
 
-header > h1 {
+header>h1 {
     margin: 10px;
 }
-header > h2 {
+
+header>h2 {
     margin: 10px;
 }
 
@@ -165,6 +166,19 @@ aside {
 
 aside li {
     margin: 12px;
+}
+
+.cookie {
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #FA0;
+    color: #FFF;
+    opacity: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 footer p {
