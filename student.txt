@@ -1,0 +1,5 @@
+Student name: Anthony Shoshi Gomes
+Student number: 695220
+Student class: HAFTIT1D
+Student GitHub website: https://Anthony-Shoshi.github.io
+Student GitHub repository: https://github.com/Anthony-Shoshi/webmarkup-final-assessment
