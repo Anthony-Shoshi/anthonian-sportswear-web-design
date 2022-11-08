@@ -1,10 +1,16 @@
+/* ===============Reset Start=============== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
+/* ===============Reset End=============== */
+
+/* ===============Common Start=============== */
 header {
     padding: 5px;
 }
@@ -55,6 +61,10 @@ nav ul li a:hover {
     color: white;
     transition: 0.8s;
 }
+
+/* ===============Common End=============== */
+
+/* ===============Index Page Start=============== */
 
 .promo-movie {
     margin: 10px;
@@ -110,7 +120,7 @@ article footer {
     flex-direction: row;
 }
 
-aside {
+#upcoming-routes {
     width: 20%;
     padding: 10px 20px;
     margin: 10px;
@@ -151,14 +161,14 @@ footer p {
     margin: 10px;
 }
 
-/* ===============Tab=============== */
+/* ===============Index Page - Tab=============== */
 
 @media (max-width: 798px) {
     .row {
         flex-direction: column-reverse;
     }
 
-    aside {
+    #upcoming-routes {
         width: 98%;
         margin: 0 5px;
     }
@@ -182,9 +192,9 @@ footer p {
     }
 }
 
-/* ===============Tab=============== */
+/* ===============Index Page - Tab=============== */
 
-/* ===============Mobile=============== */
+/* ===============Index Page - Mobile=============== */
 
 .hamburgerBtn {
     display: none;
@@ -203,7 +213,7 @@ footer p {
         flex-direction: column-reverse;
     }
 
-    aside {
+    #upcoming-routes {
         width: 98%;
         margin: 0 5px;
     }
@@ -265,7 +275,9 @@ footer p {
 }
 
 
-/* ===============Mobile=============== */
+/* ===============Index Page - Mobile=============== */
+
+/* ===============Index Page End=============== */
 
 /* ===============Contact Page Start=============== */
 
@@ -274,11 +286,11 @@ footer p {
     margin: 10px;
 }
 
-#contact-form fieldset {    
+#contact-form fieldset {
     padding: 15px;
 }
 
-#contact-form legend {    
+#contact-form legend {
     font-weight: 900;
     padding: 10px;
     font-size: 18px;
@@ -289,7 +301,9 @@ footer p {
     margin: 10px;
 }
 
-#contact-form input, textarea, button {
+#contact-form input,
+textarea,
+button {
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -320,11 +334,6 @@ footer p {
     flex-shrink: 0;
     flex-grow: 0;
     line-height: 20px;
-}
-
-#contact-page * {
-    text-decoration: none;
-    list-style: none;
 }
 
 #contact-page aside img {
@@ -371,3 +380,136 @@ footer p {
 /* ===============Contact Page - Mobile=============== */
 
 /* ===============Contact Page End=============== */
+
+/* ===============Pricing Page Start=============== */
+
+#pricing-table {
+    max-width: 100%;
+    overflow: auto;
+}
+
+#pricing-table table {
+    margin: 10px;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    border-collapse: collapse;
+}
+
+#pricing-table thead,
+tfoot {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: steelblue;
+}
+
+#pricing-table .product {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+
+#pricing-table tbody img {
+    width: 30%;
+    border-radius: 5%;
+    object-fit: cover;
+    box-shadow: 5px 5px 6px 0px #959595;
+}
+
+#pricing-table th,
+td {
+    padding: 10px;
+    border: 1px solid #00000017;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#pricing-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#pricing-top-three {
+    width: 30%;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    flex-shrink: 0;
+    flex-grow: 0;
+    line-height: 20px;
+}
+
+#pricing-top-three img {
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+
+#source {
+    margin: 10px;
+}
+
+/* ===============Pricing Page - Tab=============== */
+
+@media (max-width: 798px) {
+
+    #pricing-page .row {
+        flex-direction: column;
+    }
+
+    #pricing-table {
+        width: 100%;
+    }
+
+    #pricing-top-three {
+        width: 97%;
+    }
+    
+    #pricing-top-three ul li:first-child {
+        display: none;
+    }
+
+    #pricing-top-three ul {
+        display: flex;
+    }
+    
+    #pricing-top-three ul li {
+        margin: 0 5px;
+    }
+}
+
+/* ===============Pricing Page - Tab=============== */
+
+/* ===============Pricing Page - Mobile=============== */
+
+@media (max-width: 480px) {
+
+    #pricing-page .row {
+        flex-direction: column;
+    }
+
+    #pricing-top-three {
+        width: 95%;
+    }
+
+    #pricing-table {
+        width: 98%;
+    }
+
+    #pricing-top-three ul li:first-child {
+        display: block;
+    }
+
+    #pricing-top-three ul {
+        display: block;
+    }
+    
+    #pricing-top-three ul li {
+        margin: 0 5px;
+    }
+}
+
+/* ===============Pricing Page - Mobile=============== */
+
+/* ===============Pricing Page End=============== */
