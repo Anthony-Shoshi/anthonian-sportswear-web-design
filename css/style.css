@@ -132,6 +132,10 @@ article h2 {
     float: right;
 }
 
+.articles figcaption {
+    margin-left: 9px;
+}
+
 .dot {
     height: 5px;
     width: 5px;
@@ -197,6 +201,10 @@ article footer {
     .articles figure {
         float: left;
     }
+
+    .articles figcaption {
+        margin-left: 0;
+    }
 }
 
 /* ===============Index Page - Tab=============== */
@@ -242,6 +250,10 @@ article footer {
         width: 100%;
         height: 12rem;
     }
+
+    .articles figcaption {
+        margin-left: 0;
+    }
     
     .articles figure {
         width: 100%;
@@ -268,6 +280,7 @@ article footer {
     nav ul {
         display: none;
         position: absolute;
+        z-index: 10;
         top: 4.3rem;
         right: -100%;
         width: 50%;
@@ -565,8 +578,7 @@ td {
     grid-column: 2 / 4;
 }
 
-#product-aside {
-    width: 100%;
+#product-aside {    
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
