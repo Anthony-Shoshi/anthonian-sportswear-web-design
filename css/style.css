@@ -15,6 +15,12 @@ body {
 /* ===============Reset End=============== */
 
 /* ===============Common Start=============== */
+
+@font-face {
+    font-family: 'Notable';
+    src: url(../font/Notable-Regular.ttf);
+}
+
 header {
     padding: 5px;
 }
@@ -33,7 +39,7 @@ header {
 nav {
     width: 100%;
     height: 60px;
-    background-color: rgb(110, 233, 176);
+    background-color: #09004a;
 }
 
 nav ul {
@@ -47,22 +53,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #ffffff;
 }
 
 nav ul li a:hover {
-    background-color: gold;
+    background-color: #fb6d01;
     padding: 5px;
     border-radius: 5px;
-    color: white;
+    color: #ffffff;
     transition: 0.8s;
 }
 
 .active {
-    background-color: gold;
+    background-color: #fb6d01;
     padding: 5px;
     border-radius: 5px;
-    color: white;
+    color: #ffffff;
     transition: 0.8s;
 }
 
@@ -81,14 +87,15 @@ aside h2 {
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 9999;
 }
 
 .footer {
     display: block;
     width: 100%;
     height: 40px;
-    background-color: #333;
-    color: #fff;
+    background-color: #323232;
+    color: #ffffff;
     line-height: 40px;
 }
 
@@ -108,6 +115,9 @@ footer p {
     width: 100%;
     height: 22rem;
     object-fit: cover;
+    border-style: double;
+    border-color: #fb6d01;
+    border-width: thick;
 }
 
 .articles {
@@ -117,12 +127,26 @@ footer p {
 
 article h2 {
     margin-top: 5px;
+    font-family: 'Notable';
+}
+
+article footer a:hover {
+    color: #fb6d01;
+}
+
+article footer a:visited {
+    color: #239155;
 }
 
 .articles p {
     font-size: 16px;
+    word-spacing: 3px;
     padding: 5px 0 5px;
     text-align: left;
+}
+
+.articles p:first-letter{
+    font-size: 22px;
 }
 
 .articles img {
@@ -136,7 +160,7 @@ article h2 {
     float: right;
 }
 
-.articles figcaption {
+.articles figure > figcaption {
     margin-left: 9px;
 }
 
@@ -162,12 +186,12 @@ article footer {
     flex-direction: row;
 }
 
-#upcoming-routes {
+.articles + aside {
     width: 20%;
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: #eeeeee;
     flex-shrink: 0;
     flex-grow: 0;
     line-height: 20px;
@@ -180,7 +204,7 @@ article footer {
         flex-direction: column-reverse;
     }
 
-    #upcoming-routes {
+    .articles + aside {
         width: 98%;
         margin: 0 5px;
     }
@@ -194,6 +218,7 @@ article footer {
 
     .articles p {
         text-align: left;
+        word-spacing: 2px;
         font-size: 16px;
         padding: 5px 0 5px;
     }
@@ -206,7 +231,7 @@ article footer {
         float: left;
     }
 
-    .articles figcaption {
+    .articles figure > figcaption {
         margin-left: 0;
     }
 }
@@ -232,7 +257,20 @@ article footer {
         flex-direction: column-reverse;
     }
 
-    #upcoming-routes {
+    header {
+        margin: 10px;
+        color: #ffffff;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 15px;
+    }
+
+    .articles + aside {
         width: 98%;
         margin: 0 5px;
     }
@@ -247,6 +285,7 @@ article footer {
     .articles p {
         text-align: justify;
         font-size: 16px;
+        word-spacing: 0px;
         padding-right: 10px;
     }
 
@@ -255,10 +294,10 @@ article footer {
         height: 12rem;
     }
 
-    .articles figcaption {
+    .articles figure > figcaption {
         margin-left: 0;
     }
-    
+
     .articles figure {
         width: 100%;
         margin-bottom: 5px;
@@ -288,14 +327,14 @@ article footer {
         top: 4.3rem;
         right: -100%;
         width: 50%;
-        background-color: #2db2ff;
+        background-color: #1b106e;
         padding-left: 5%;
         transition: 0.6s;
     }
 
     nav ul li a {
         font-size: 16px;
-        color: white;
+        color: #ffffff;
     }
 
     #check:checked~ul {
@@ -339,16 +378,17 @@ button {
     border-radius: 5px;
 }
 
-#contact-form button {
-    background-color: #FA0;
+#contact-form input[type='submit'] {
+    background-color: #fb6d01;
+    border-color: #ff760e;
     cursor: pointer;
-    color: white;
+    color: #ffffff;
     font-weight: bold;
     margin-top: 10px;
 }
 
-#contact-form button:hover {
-    background-color: rgb(255, 202, 96);
+#contact-form input[type='submit']:hover {
+    background-color: #ff8c35;
 }
 
 #contact-form label {
@@ -360,10 +400,25 @@ button {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: #eeeeee;
     flex-shrink: 0;
     flex-grow: 0;
     line-height: 20px;
+}
+
+#contact-info {
+    margin: 10px;
+}
+
+#contact-info ul {
+    line-height: 22px;
+}
+
+#address,
+#hours {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 #contact-page aside img {
@@ -376,15 +431,16 @@ button {
 
 @media (max-width: 798px) {
     #contact-page .row {
-        flex-direction: column-reverse;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     #contact-page aside {
-        width: 98%;
+        width: 29%;
     }
 
     #contact-form {
-        width: 98%;
+        width: 65%;
     }
 }
 
@@ -434,14 +490,12 @@ tfoot {
     background-color: steelblue;
 }
 
-#pricing-table .product {
-    display: flex;
-    align-items: center;
-    gap: 3%;
+.td-img {
+    width: 20%;
 }
 
 #pricing-table tbody img {
-    width: 30%;
+    width: 100%;
     border-radius: 5%;
     object-fit: cover;
     box-shadow: 5px 5px 6px 0px #959595;
@@ -464,7 +518,7 @@ td {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: #eeeeee;
     flex-shrink: 0;
     flex-grow: 0;
     line-height: 20px;
@@ -553,6 +607,18 @@ td {
     gap: 10px;
 }
 
+#article-container article p {
+    text-indent: 3%;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+#article-container article ul {
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
 #article-container article {
     padding: 10px;
     font-size: 15px;
@@ -582,11 +648,11 @@ td {
     grid-column: 2 / 4;
 }
 
-#product-aside {    
+#product-aside {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: #eeeeee;
     flex-shrink: 0;
     flex-grow: 0;
     line-height: 20px;
@@ -665,7 +731,7 @@ td {
     #article-container article:nth-child(1) {
         grid-row: 4 / 4;
     }
-    
+
     #article-container article:nth-child(2) {
         grid-row: 5 / 5;
     }
@@ -681,7 +747,7 @@ td {
     }
 
     #article-container article:nth-child(5) {
-        display: none;        
+        display: none;
     }
 
     #article-container article:nth-child(6) {
