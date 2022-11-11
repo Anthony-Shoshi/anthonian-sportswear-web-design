@@ -76,7 +76,7 @@ aside h2 {
 }
 
 .cookie {
-    width: 200px;
+    width: 25%;
     padding: 15px;
     margin: 10px;
     background-color: #FA0;
@@ -87,6 +87,19 @@ aside h2 {
     bottom: 0;
     right: 0;
     z-index: 9999;
+}
+
+.cookie-btn {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #1b106e;
+    color: #eeeeee;
+    cursor: pointer;
+}
+
+.cookie-btn:hover {
+    padding: 5px;
+    background-color: #4537ac;
 }
 
 .footer {
@@ -144,7 +157,7 @@ article footer a:visited {
     text-align: left;
 }
 
-.articles p:first-letter{
+.articles p:first-letter {
     font-size: 22px;
 }
 
@@ -159,7 +172,7 @@ article footer a:visited {
     float: right;
 }
 
-.articles figure > figcaption {
+.articles figure>figcaption {
     margin-left: 9px;
 }
 
@@ -185,7 +198,7 @@ article footer {
     flex-direction: row;
 }
 
-.articles + aside {
+.articles+aside {
     width: 20%;
     padding: 10px 20px;
     margin: 10px;
@@ -196,7 +209,7 @@ article footer {
     line-height: 20px;
 }
 
-.articles + aside ol {
+.articles+aside ol {
     padding-left: 15px;
     padding-top: 5px;
     line-height: 27px;
@@ -209,11 +222,16 @@ article footer {
 /* ===============Index Page - Tab=============== */
 
 @media (max-width: 798px) {
+
+    .cookie {
+        width: 50%;
+    }
+
     .row {
         flex-direction: column-reverse;
     }
 
-    .articles + aside {
+    .articles+aside {
         width: 98%;
         margin: 0 5px;
     }
@@ -240,7 +258,7 @@ article footer {
         float: left;
     }
 
-    .articles figure > figcaption {
+    .articles figure>figcaption {
         margin-left: 0;
     }
 }
@@ -262,6 +280,10 @@ article footer {
 
 @media (max-width: 480px) {
 
+    .cookie {
+        width: 75%;
+    }
+
     .row {
         flex-direction: column-reverse;
     }
@@ -279,7 +301,7 @@ article footer {
         font-size: 15px;
     }
 
-    .articles + aside {
+    .articles+aside {
         width: 98%;
         margin: 0 5px;
     }
@@ -303,7 +325,7 @@ article footer {
         height: 12rem;
     }
 
-    .articles figure > figcaption {
+    .articles figure>figcaption {
         margin-left: 0;
     }
 
@@ -487,11 +509,24 @@ button {
     overflow: auto;
 }
 
+.article-overview {
+    margin: 10px;
+}
+
+.article-overview header {
+    padding: 0;
+}
+
+.article-overview>article>p {
+    line-height: 20px;
+}
+
 #pricing-table table tbody tr td:first-child {
     color: #FF0;
 }
 
 #pricing-table table {
+    width: 100%;
     margin: 10px;
     font-size: 13px;
     color: #333;
@@ -534,8 +569,12 @@ td {
     background-color: #FFF;
 }
 
+#pricing-page #pricing-coloumn {
+    width: 75%;
+}
+
 #pricing-top-three {
-    width: 30%;
+    width: 23%;
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
@@ -571,6 +610,10 @@ td {
         width: 100%;
     }
 
+    #pricing-page #pricing-coloumn {
+        width: 98%;
+    }
+
     #pricing-top-three {
         width: 97%;
     }
@@ -594,8 +637,19 @@ td {
 
 @media (max-width: 480px) {
 
+    .article-overview header {
+        color: #000000;
+        margin: 5px 0;
+        padding: 0;
+        position: static;
+    }
+
     #pricing-page .row {
         flex-direction: column;
+    }
+
+    #pricing-page #pricing-coloumn {
+        width: 100%;
     }
 
     #pricing-top-three {
