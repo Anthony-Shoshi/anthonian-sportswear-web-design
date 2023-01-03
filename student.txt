@@ -3,4 +3,3 @@ Student number: 695220
 Student class: HAFTIT1D
 Student GitHub website: https://anthony-shoshi.github.io/
 Student GitHub repository: https://github.com/Anthony-Shoshi/anthony-shoshi.github.io
-I got 72!!
